@@ -57,7 +57,7 @@ header{
 
 
  main{
-        height: 300vh;
+        height: 180vh;
     
     }   
 .contenedor_tipo_productos{
@@ -156,6 +156,9 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 2;
+        position: relative;
+        
 
     }
 
@@ -163,6 +166,30 @@ header{
             height: 65vh;
             width: 95vw;
             border-radius: 0.3rem;
+            
+        }
+
+        .boton_descubre{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .boton_descubre:hover{
+            transform: translate(-50%, -50%) scale(1.1);
+
+        }
+
+        .descubre{
+            height: 6rem;
+            width: 15rem;
+            font-size: 3rem;
+            background: white;
+            border-radius: 2rem;
+            border: 2px solid white;
+            
         }
 
 /* ahora vamos a hacer el css del main del index*/
@@ -263,4 +290,7 @@ header{
     }
         
     
-    
+footer{
+    width: 100vw;
+    height: auto;
+}
