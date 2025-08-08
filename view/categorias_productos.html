@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="../js/ui.js"></script>
 </head>
+
 <body>
-    <nav><div class="contenedor_tipo_productos">
-        <div class="menu_tipo_productos">
-            <ul class="productos">
-                <div class="producto_lista">
-                    <li>Collares</li>
+
+    <header class="cabecera_productos">
+        <div class="slider_informacion">
+            <div class="contenedor_carousel">
+                <div class="movimiento_carousel">
+                    <div class="mensaje_info_carousel" id="primer_mensaje">
+                        <p class="texto_info">Te presentamos todos nuestros productos</p>
+                    </div>
+
+                    <div class="mensaje_info_carousel">
+                        <p class="texto_info">Productos 100% artesanos</p>
+                    </div>
+
+                    <div class="mensaje_info_carousel" id="ultimo_mensaje">
+                        <p class="texto_info">Envios a peninsula e islas</p>
+                    </div>
                 </div>
-                <div class="producto_lista">
-                    <li>Anillos</li>
-                </div>
-                <div class="producto_lista">
-                    <li>Pulseras</li>
-                </div>
-                <div class="producto_lista">
-                    <li>Pendientes</li>
-                </div>
-    
-            </ul>
+            </div>
         </div>
-    </div>
+    </header>
+    <nav>
+        <div class="boton_home">
+            <button class="producto_lista" id="boton_regreso_index">
+                <a href="../index.html">Home</a>
+            </button>
+        </div>
+        <div class="contenedor_tipo_productos">
+            <div class="menu_tipo_productos">
+                <ul class="productos">
+                    <div class="producto_lista">
+                        <li>Collares</li>
+                    </div>
+                    <div class="producto_lista">
+                        <li>Anillos</li>
+                    </div>
+                    <div class="producto_lista">
+                        <li>Pulseras</li>
+                    </div>
+                    <div class="producto_lista">
+                        <li>Pendientes</li>
+                    </div>
+                </ul>
+            </div>
+        </div>
     </nav>
 </body>
+
 </html>

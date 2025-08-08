@@ -189,6 +189,7 @@ header{
             background: white;
             border-radius: 2rem;
             border: 2px solid white;
+            
         }
 
 /* ahora vamos a hacer el css del main del index*/
@@ -292,4 +293,21 @@ header{
 footer{
     width: 100vw;
     height: auto;
+}
+
+/*ahora va el css de la pestaña productos*/
+
+.cabecera_productos{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+}
+
+.boton_home{
+    margin-bottom: 3rem;
+    margin-right: 1rem;
+}
+
+#boton_regreso_index{
+    width: 1rem;
 }
