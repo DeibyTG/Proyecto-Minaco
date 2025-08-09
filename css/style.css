@@ -256,7 +256,7 @@ header{
     }
 
     .tipo_producto:hover{
-        scale: 1.1;
+        scale: 1.05;
         transition: 0.5s;
     }
 
@@ -291,23 +291,111 @@ header{
         
     
 footer{
-    width: 100vw;
     height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
+
+    .enlaces{
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .rrss{
+        color: black;
+    }
+
+    .derechos{
+        text-align: center;
+        height: auto;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
 
 /*ahora va el css de la pestaña productos*/
 
 .cabecera_productos{
     width: 100vw;
-    height: 10vh;
+    height: auto;
+}
+
+.nav_productos{
+    height: auto;
+    margin-top: 1rem;
+}
+
+.info_nav_productos{
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.boton_home{
-    margin-bottom: 3rem;
-    margin-right: 1rem;
+.volver_index{
+    width: 3rem;
+    margin-left: 3rem;
 }
 
-#boton_regreso_index{
-    width: 1rem;
+/* ahora vamos a crear el css del main para mostrar los productos*/
+
+
+.main_productos{
+    width: 100vw;
+    height: auto;
+
 }
+    .carousel_escaparate_collares{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .escaparate_collares_1{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .escaparate_collares_2{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .carousel_productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 0.4rem;
+        overflow: hidden;
+
+    }
+
+    .foto_producto_categoria{
+        height: 20rem;
+        width: 16rem;
+
+    }
+
+    .carousel_escaparate_anillos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .escaparate_anillos_1{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
