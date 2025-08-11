@@ -44,4 +44,14 @@ setInterval(deslizar_mensajes,3000);
 
 
 
+//boton desplegable menu en producto
+
+function f_desplegar_menu_categorias() {
+    const activo = document.getElementById('deplegable_categorias');
+    activo.classList.toggle('activo');
+
+    
+
+}
+  
 

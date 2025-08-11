@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos Minaco</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/ui.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -35,121 +34,193 @@
             <div class="volver_index">
                 <button class="producto_lista"><a href="../index.html">Inicio</a></button>
             </div>
-            <div class="contenedor_tipo_productos">
-                <div class="menu_tipo_productos">
-                    <ul class="productos">
-                        <div class="producto_lista">
-                            <li>Collares</li>
+            <div class="desplegable_categorias">
+                <div class="boton_desplegable_categorias">
+                    <div class="boton_desplegable">
+                        <button class="producto_lista" id="boton__accion_desplegable"
+                            onclick="f_desplegar_menu_categorias()">Categorias</button>
+                    </div>
+                    <div class="contenedor_tipo_productos">
+                        <div class="menu_tipo_productos">
+                            <ul class="productos" id="deplegable_categorias">
+                                <li class="producto_lista">Collares</li>
+                                <li class="producto_lista">Anillos</li>
+                                <li class="producto_lista">Pulseras</li>
+                                <li class="producto_lista">Pendientes</li>
+                            </ul>
                         </div>
-                        <div class="producto_lista">
-                            <li>Anillos</li>
-                        </div>
-                        <div class="producto_lista">
-                            <li>Pulseras</li>
-                        </div>
-                        <div class="producto_lista">
-                            <li>Pendientes</li>
-                        </div>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <main class="main_productos">
-
-        <div class="escaparate_collares">
-            <h2>Collares</h2>
-            <div class="carousel_escaparate_collares">
-                <div class="escaparate_collares_1">
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/collares/collar_caracola_dorado.jpg" / class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Collar 1
-                        </label>
+        <div class="escaparate">
+            <div class="escaparate_collares">
+                <h2>Collares</h2>
+                <div class="carousel_escaparate_collares">
+                    <div class="escaparate_collares_1">
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/collares/collar_caracola_dorado.jpg" / class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Collar 1
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/collares/collar_chuche_acero.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Collar 1
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/collares/collar_maritimo_acero.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Collar 1
+                            </label>
+                        </div>
                     </div>
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/collares/collar_chuche_acero.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Collar 1
-                        </label>
-                    </div>
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/collares/collar_maritimo_acero.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Collar 1
-                        </label>
+                    <div class="escaparate_collares_2">
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/collares/collar_paraiso_acero.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Collar 1
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/collares/collar_verano_dorado.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Collar 1
+                            </label>
+                        </div>
                     </div>
                 </div>
-                <div class="escaparate_collares_2">
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/collares/collar_paraiso_acero.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Collar 1
-                        </label>
+            </div>
+
+            <div class="escaparate_anillos">
+                <h2>Anillos</h2>
+                <div class="carousel_escaparate_anillos">
+                    <div class="escaparate_anillos_1">
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/anillos/anillo_lucero_plateado.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Anillo 1
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/anillos/anillo_paris_plateado.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Anillo 1
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/anillos/anillo_sol_plata.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Anillo 1
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/anillos/anillo_solar_dorado.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Anillo 1
+                            </label>
+                        </div>
+
                     </div>
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/collares/collar_verano_dorado.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Collar 1
-                        </label>
+                </div>
+            </div>
+
+            <div class="escaparate_pulseras">
+                <h2>Pulseras</h2>
+                <div class="carousel_escaparate_pulseras">
+                    <div class="escaparate_pulseras_1">
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/pulseras/pulsera_mar_rosa.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Pulsera Mar Rosa
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="escaparate_pendintes">
+                <h2>Pendientes</h2>
+                <div class="carousel_escaparate_pendientes">
+                    <div class="escaparate_pendientes_1">
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/pendientes/pendientes_cadena_dorado.jpg"
+                                    class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Pendintes Cadena Dorado
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/pendientes/pendientes_estrella_dorado.jpg"
+                                    class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Pendientes Estrella Dorado
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/pendientes/pendientes_estrella_plateado.jpg"
+                                    class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Pendientes Estrella Plateada
+                            </label>
+                        </div>
+                    </div>
+                    <div class="escaparate_pendientes_2">
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/pendientes/pendientes_sol_dorado.jpg" class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Pendientes Sol Dorado
+                            </label>
+                        </div>
+                        <div class="carousel_productos">
+                            <picture>
+                                <img src="../img/pendientes/pendientes_sol_plateado.jpg"
+                                    class="foto_producto_categoria">
+                            </picture>
+                            <label>
+                                Pendientes Sol Plateado
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="escaparate_anillos">
-            <h2>Anillos</h2>
-            <div class="carousel_escaparate_anillos">
-                <div class="escaparate_anillos_1">
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/anillos/anillo_lucero_plateado.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Anillo 1
-                        </label>
-                    </div>
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/anillos/anillo_paris_plateado.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Anillo 1
-                        </label>
-                    </div>
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/anillos/anillo_sol_plata.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Anillo 1
-                        </label>
-                    </div>
-                    <div class="carousel_productos">
-                        <picture>
-                            <img src="../img/anillos/anillo_solar_dorado.jpg" class="foto_producto_categoria">
-                        </picture>
-                        <label>
-                            Anillo 1
-                        </label>
-                    </div>
+        <script src="../js/ui.js"></script>
 
-                </div>
-            </div>
-
-
-        </div>
     </main>
 </body>
 
