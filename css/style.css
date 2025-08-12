@@ -353,7 +353,8 @@ header{
         border-bottom: 1px solid black;
     }
         
-    
+/*vamos a hacer el css del footer que va a estar presente en todas las pestañas
+de la pagina*/
 footer{
     height: auto;
     width: 100vw;
@@ -363,6 +364,7 @@ footer{
     border-top: 0.4px solid black;
     padding-top: 2rem;
 }
+
 
     .enlaces{
         margin-bottom: 2rem;
@@ -378,11 +380,23 @@ footer{
     }
 
     .derechos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
         height: auto;
         font-size: 1.4rem;
         margin-bottom: 1rem;
+        gap: 3rem;
     }
+
+    .logo-footer{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 4rem;
+    }
+
+
 
 
 /*ahora va el css de la pestaña productos*/
