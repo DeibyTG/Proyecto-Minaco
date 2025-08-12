@@ -56,10 +56,22 @@ header{
     para mostrar los productos*/
 
 
- main{
-        height: 180vh;
-    
-    }   
+    .main-index{
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition:opacity 1s ease, visibility 3s ease ;
+} 
+
+    .main-index.animacion-ver-bs{
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 2s;
+        margin-bottom: 3rem;
+    }
+
+
 .contenedor_tipo_productos{
     width: 100vw;
     height: 15vh;
@@ -182,19 +194,7 @@ header{
 
         }
 
-        /* .descubre{
-            height: 6rem;
-            width: 15rem;
-            font-size: 3rem;
-            background: white;
-            border-radius: 2rem;
-            border: 2px solid white;
-            cursor: pointer;
-            overflow: hidden;
-            position: relative;
-            transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
-                        
-        } */
+
 
         .descubre {
             --c2: #202020;
@@ -359,6 +359,9 @@ footer{
     width: 100vw;
     display: flex;
     flex-direction: column;
+    margin-top: 4rem;
+    border-top: 0.4px solid black;
+    padding-top: 2rem;
 }
 
     .enlaces{

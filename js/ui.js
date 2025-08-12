@@ -50,8 +50,20 @@ function f_desplegar_menu_categorias() {
     const activo = document.getElementById('deplegable_categorias');
     activo.classList.toggle('activo');
 
-    
-
 }
+
+//accion para que el main de la pagina index aparezca cuando hagamos scroll hacia abajo
+
+function f_ver_bestSeller(){
+    const mainIndex=document.querySelector('.main-index');
+
+    if(window.scrollY>100){
+        mainIndex.classList.add('animacion-ver-bs');
+    }else{
+        return;
+    }
+}
+
+window.addEventListener('scroll', f_ver_bestSeller);
   
 
