@@ -44,13 +44,7 @@ setInterval(deslizar_mensajes,3000);
 
 
 
-//boton desplegable menu en producto
 
-function f_desplegar_menu_categorias() {
-    const activo = document.getElementById('deplegable_categorias');
-    activo.classList.toggle('activo');
-
-}
 
 //accion para que el main de la pagina index aparezca cuando hagamos scroll hacia abajo
 
@@ -66,4 +60,38 @@ function f_ver_bestSeller(){
 
 window.addEventListener('scroll', f_ver_bestSeller);
   
+// ahora vamos a hacer un funcion para que cuando hagamos click en uno de los productos nos abra otra pestaña con us informacion precio e imagen 
 
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const params=new URLSearchParams(window.location.search);
+    const idProducto=params.get('id');
+
+    fetch('../data/productos.json')
+        .then(res=>res.json())
+        .then(data=>{
+            let producto=null;
+
+            if(data.collares[idProducto]) producto=data.collares[idProducto];
+            else if (data.anillos[idProducto]) producto=data.anillos[idProducto];
+            else if(data.pulsera[idProducto]) producto=data.pulsera[idProducto];
+
+            if(producto){
+
+                const img=document.querySelector('.foto-producto-seleccionado');
+                    img.src=producto.imagen;
+                    img.alt=producto.nombre;
+
+                const info=document.querySelector(".info-producto-seleccionado");
+                    info.innerHTML=`
+                        <h2>${producto.nombre}</h2>
+                        <p>Precio: ${producto.precio}${producto.moneda}</p>
+                        <p>${producto.descripcion}</p>
+                    `;
+            }else{
+                document.querySelector(".contenedor-producto-seleccionado").textContent="producto no encontrado"
+            }
+
+
+        });
+});

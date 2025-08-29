@@ -1,0 +1,53 @@
+{
+    "collares":{
+        "collar-caracola-dorado":{
+            "nombre":"Collar Caracola dorado","precio":7,"moneda":"€", "imagen":"../img/collares/collar-caracola-gold.jpg" 
+        },
+        "collar-dulce":{
+            "nombre":"Collar Dulce","precio":7,"moneda":"€", "imagen":"../img/collares/collar-dulce.jpg"
+        },
+        "collar-estrellado":{
+            "nombre":"Collar Estrellado","precio":7,"moneda":"€", "imagen":"../img/collares/collar-estrellado.jpg"
+        },
+        "collar-fenix":{
+            "nombre":"Collare Fenix","precio":7,"moneda":"€", "imagen":"../img/collares/collar-fenix.jpg"
+        },
+        "collar-maritimo":{
+            "nombre":"Collar Maritimo","precio":7,"moneda":"€", "imagen":"../img/collares/collar-maritimo-acero.jpg"
+        },
+        "collar-chuche":{
+            "nombre":"Collar Chuche","precio":7,"moneda":"€", "imagen":"../img/collares/collar-chuche.jpg"
+        },
+        "collar-verano":{
+            "nombre":"Collar Verano","precio":7,"moneda":"€", "imagen":"../img/collares/collar-verano.jpg"
+        },
+        "collar-paraiso":{
+            "nombre":"Collar Paraiso","precio":7,"moneda":"€", "imagen":"../img/collares/collar-paraiso.jpg"
+        }
+    },
+    "anillos":{
+        "anillo-sol-golden":{
+            "nombre":"Sol Golden","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-sol-golden.jpg" 
+        },
+        "anillo-sol-plata":{
+            "nombre":"Sol Plata","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-sol-plata.jpg" 
+        },
+        "anillo-mariposa-acero":{
+            "nombre":"Mariposa","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-mariposa-acero.jpg" 
+        },
+        "anillo-paris-plata":{
+            "nombre":"Paris Plata","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-paris-plata.jpg","descripcion":"Anillo unico para gobernarlos a todos"
+        },
+        "anillo-zirconita":{
+            "nombre":"Zirconita","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-zirconita.jpg" 
+        }
+    },
+    "pulsera":{
+        "pulsera-plateada":{
+            "nombre":"Estrella Plateada","precio":7,"moneda":"€", "imagen":"../img/pulseras/pulsera-estrella-plateada.jpg" 
+        },
+        "pulsera-mar-rosa":{
+            "nombre":"Mar Rosa","precio":7,"moneda":"€", "imagen":"../img/pulseras/pulsera-mar-rosa.jpg" 
+        }
+    }
+}

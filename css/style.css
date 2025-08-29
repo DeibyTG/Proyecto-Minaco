@@ -274,6 +274,7 @@ header{
     text-align: center;
     }
 
+
     .titulo_best_sellet{
         text-align: left;
         margin-left: 1%;
@@ -301,6 +302,11 @@ header{
         flex-direction: column;
         gap: 1rem;
         display: flex;
+    }
+
+    .enlace-pedido{
+        color: black;
+        text-decoration: none;
     }
 
     .escaparate_1{
@@ -701,3 +707,94 @@ para el menu de navegacion*/
         flex-direction: row;
         gap: 4rem;
     }
+
+
+/*ahora vamos con el css de los productos seleecionados
+se va activar cuando un usuario haga click en uno de los productos
+como el header y el footer es el mismo en todos no hace falta volverlo a poner
+*/
+
+.nav-producto-seleccionado{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    #boton-volver-categorias{
+        width: 12rem;
+        white-space: nowrap;
+    }
+
+.main-producto-seleccionado{
+    width: 100%;
+    height: auto;
+    padding:2rem
+}
+
+ .contenedor-producto-seleccionado{
+        margin: 2rem;
+        width: 90vw;
+        height: 30rem;
+        display: flex;
+        padding: 2rem;
+    }
+
+ .informacio-producto-seleccionado{
+        width: 65vw;
+        height: auto;
+    }
+
+        .foto-producto-seleccionado{
+            width: 35rem;
+            height: 35rem;
+        }
+
+ .contenedor-informacion-producto-seleccionado{
+        width: 35vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .info-producto-seleccionado{
+            width: auto;
+            height: 70vh;
+            font-size: 2rem;
+            
+        }
+
+        .contenedor-boton-realizar-pedido{
+            width: auto;
+            height: 30vh;
+        }
+
+            .boton-realizar-pedido{
+                background-color: #eee;
+                border: none;
+                padding: 1rem;
+                font-size: 1rem;
+                width: 10em;
+                border-radius: 1rem;
+                color: lightcoral;
+                box-shadow: 0 0.4rem #dfd9d9;
+                cursor: pointer;
+            }
+
+            .boton-realizar-pedido:active{
+                color: white;
+                box-shadow: 0 0.2rem #dfd9d9;
+                transform: translateY(0.2rem);
+            }
+
+            .boton-realizar-pedido:hover{
+                background: lightcoral;
+                color: white;
+                text-shadow: 0 0.1rem #bcb4b4;
+            }
+
+            .boton-realizar-pedido:disabled{
+                cursor: auto;
+                color: grey;
+            }
+
+
+
