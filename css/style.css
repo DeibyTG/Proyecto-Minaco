@@ -11,7 +11,7 @@ en todas las pestañas del proyecto*/
 
 header{
     width: 100vw;
-    height: 3vh;
+    height: auto;
 
 }
 
@@ -51,7 +51,10 @@ header{
             font-family: Arial, Helvetica, sans-serif;
             }
         
-        
+        .logo-empresa{
+            display: flex;
+            justify-content: center;
+        }
     /*ahora viene el css del menu de navegacion 
     para mostrar los productos*/
 
@@ -161,7 +164,13 @@ header{
     donde aparece el nombre de la empresa con un pequeño
     boton*/
 
-    .contenedor_foto_portada{
+    .portada-banner{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .contenedor-nav{
         width: 100vw;
         margin-top: 1.5rem;
         height: 70vh;
@@ -173,6 +182,8 @@ header{
         
 
     }
+
+        
 
         .foto_portada{
             height: 65vh;
@@ -391,59 +402,164 @@ footer{
     }
 
     .logo-footer{
-        width: 15rem;
-        height: 15rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 4rem;
     }
+
+
+
 
 /*ahora va el css de la pestaña productos*/
 
 .cabecera_productos{
     width: 100vw;
     height: auto;
-}
-
-.nav_productos{
-    height: auto;
     margin-top: 1rem;
 }
 
-.info_nav_productos{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+:root {
+    --dark: 0;
+    --transition: 0.28s;
+    --font-size: 1.2rem;
+    --bg: hsl(0 0% calc((100 - (var(--dark, 0) * 100)) * 1%));
+    --color: hsl(0 0% calc(var(--dark) * 100%));
+  }
 
-}
+  @media(prefers-color-scheme: dark) {
+    :root {
+      --dark: 1;
+    }
+  }
 
-.volver_index{
-    width: 3rem;
+.contenedor-enlace-index{
+    width: 7rem;
+    height: auto;
     margin-left: 3rem;
+    outline-color: hsl(0 0% calc(var(--dark) * 100%));
+    --padding: calc(var(--font-size) * 0.75);
+    cursor: pointer;
+    letter-spacing: calc(var(--font-size) * 0.02);
+    font-family: sans-serif;
+    font-weight: bold;
+    background: var(--bg);
+    font-size: var(--font-size);
+    border-radius: calc(var(--font-size) * 0.5);
+    border:4px solid   hsl(0 0% calc((40 + (var(--dark) * 20)) * 1%) / calc(0.3 + (var(--hovered, 0) * 0.8)));
+    color: var(--color);
+    position: relative;
+    transition: border-color var(--transition);
+    text-align: center;
 }
 
-.boton_desplegable{
+.contenedor-enlace-index::after{
+    content: "";
+    position: absolute;
+    inset: calc(var(--font-size) * -0.025);
+    background: hsl(0 0% calc(var(--dark) * 100%) / 0.45);
+    filter: blur(calc(var(--font-size) * 0.75));
+    scale: var(--hovered, 0);
+    z-index: -1;
+    transition: scale var(--transition);
+}
+
+.contenedor-enlace-index:hover{
+    --hovered: 1;
+}
+
+.enlace-volver-index{
+    color: white;
+    background: var(--bg);
+    padding: calc(var(--font-size) * 0.9) calc(var(--font-size) * 1.36);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns:calc((var(--font-size) * 0.75) * (1 - var(--hovered, 0))) 1fr calc((var(--font-size) * 1) * var(--hovered, 0));
+    align-items: center;
+    transition: grid-template-columns var(--transition);
+}
+
+
+    
+    
+
+
+
+
+
+
+/*ahora vamos add los botones que vamos a utilizar
+para el menu de navegacion*/
+
+
+.nav_productos{
+    height: auto;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 2rem;
-    margin-bottom: 3rem;
-    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    z-index: 10000;
+    background: white;
+    border-bottom: 1px solid #e2d6e7;
+
 }
 
 
-#deplegable_categorias{
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    transition: opacity 1s ease,max-height 0.4s, visibility 3s ease;
-    position:static;
+.categorias-productos{
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    width:100vw;
+    height: 7vh;
+    overflow: hidden;
+    position: sticky;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
 }
+
+    .cajon-categoria-productos{
+        height: auto;
+        width: 10rem;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        background-color: #e2d6e7;
+        border: 1px solid #d5d9d9;
+        border-radius: 8px;
+        box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+        box-sizing: border-box;
+        color: #0f1111;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Amazon Ember",sans-serif;
+        font-size: 13px;
+        line-height: 29px;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .cajon-categoria-productos ul{
+        color: black; 
+        height: auto;
+        padding: 0.2rem;
+        text-align: center;
+        
+  }
   
-#deplegable_categorias.activo{
-    height: 0;
-    opacity: 1;
-    visibility: visible;
-    max-height: 5rem;
-}
-
+  .cajon-categoria-productos:hover {
+    background-color: #d3c0d3;
+  }
+  
+  .cajon-categoria-productos:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+  }
 
 
 /* ahora vamos a crear el css del main para mostrar los productos*/
@@ -452,6 +568,7 @@ footer{
 .main_productos{
     width: 100vw;
     height: auto;
+    visibility: visible;
 
 
 }
@@ -463,7 +580,16 @@ footer{
     
     h2{
         border-bottom: 1px solid black;
+        text-align: center;
+        margin-top: 3rem;
     }
+
+    #collares,#anillos,#pulseras,#pendientes{
+        scroll-margin-top: 17vh;
+    }
+
+    /* el codigo que esta justo encima es para que al hacer
+    click en las categorias se vea el titulo con el nav */
 
     .carousel_escaparate_collares{
         display: flex;
@@ -497,8 +623,6 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 2px solid black;
-        border-radius: 0.4rem;
         overflow: hidden;
         transition: 1s ease;
 
