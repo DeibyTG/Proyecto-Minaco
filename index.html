@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minaco Home Page</title>
+    <title>Minaco</title>
     <script src="js/ui.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,48 +18,53 @@
 <body>
 
     <header>
-        <div class="slider_informacion">
-            <div class="contenedor_carousel">
-                <div class="movimiento_carousel">
-                    <div class="mensaje_info_carousel" id="primer_mensaje">
-                        <p class="texto_info">Te damos la bienvenida a nuestra tienda</p>
-                    </div>
+        <section>
+            <div class="slider_informacion">
+                <div class="contenedor_carousel">
+                    <div class="movimiento_carousel">
+                        <div class="mensaje_info_carousel" id="primer_mensaje">
+                            <p class="texto_info">Te damos la bienvenida a nuestra tienda</p>
+                        </div>
 
-                    <div class="mensaje_info_carousel">
-                        <p class="texto_info">Productos 100% artesanos</p>
-                    </div>
+                        <div class="mensaje_info_carousel">
+                            <p class="texto_info">Productos 100% artesanos</p>
+                        </div>
 
-                    <div class="mensaje_info_carousel" id="ultimo_mensaje">
-                        <p class="texto_info">Envios a peninsula e islas</p>
+                        <div class="mensaje_info_carousel" id="ultimo_mensaje">
+                            <p class="texto_info">Envios a peninsula e islas</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="logo-empresa">
+            <picture>
+                <img alt="logo footer" class="logo-footer" src="img/logo-empresa.jpg">
+            </picture>
+        </section>
     </header>
 
     <nav>
-
-        <div class="contenedor_foto_portada">
-            <picture class="portada_foto_logo">
-                <img class="foto_portada" src="img/foto-portada-actualizada.png" alt="foto_portada" />
-            </picture>
+        <div class="contenedor-nav">
+            <section class="portada-banner">
+                <picture class="portada_foto_logo">
+                    <img class="foto_portada" src="img/foto-portada-actualizada.png" alt="foto_portada" />
+                </picture>
+            </section>
             <div class="boton_descubre">
                 <button class="descubre">
-                    <a class="mensaje_descubre" href="view/categorias_productos.html" target="self">Descubre</a>
+                    <a class="mensaje_descubre" href="view/categorias_productos.html">Descubre</a>
                 </button>
             </div>
         </div>
 
 
     </nav>
-
     <main class="main-index" scroll="">
         <div class="best-seller">
-
             <div class="titulo_best_sellet">
                 <h2>Novedades!!</h2>
             </div>
-
             <div class="contenedor_carousel_ventas">
                 <div class="slider_ventas">
                     <div class="productos_ventas">
@@ -159,6 +164,7 @@
     </main>
 
     <footer>
+
         <div class="enlaces">
             <div class="redes">
                 <p>Nuestras Redes</p>
