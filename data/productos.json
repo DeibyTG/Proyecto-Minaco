@@ -49,5 +49,34 @@
         "pulsera-mar-rosa":{
             "nombre":"Mar Rosa","precio":7,"moneda":"€", "imagen":"../img/pulseras/pulsera-mar-rosa.jpg" 
         }
+    },
+    "pendientes":{
+        "pendientes-black":{
+            "nombre":"Pendientes Black","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-black.jpg"
+        },
+        "pendientes-cadena-dorado":{
+            "nombre":"Pendientes Cadena Dorada","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-cadena-dorado.jpg"
+        },
+        "pendientes-circonita":{
+            "nombre":"Pendientes Circonita","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-circonita.jpg"
+        },
+        "pendientes-sol-dorado":{
+            "nombre":"Pendientes Sol Dorado","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-sol-dorado.jpg"  
+        },
+        "pendientes-estrella-dorada":{
+            "nombre":"Pendientes Estrella Dorada","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-estrella-dorada.jpg"
+        },
+        "pendientes-olari-plata":{
+            "nombre":"Pendientes Olari Plata","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-olari-plata.jpg"
+        },
+        "pendientes-polaris":{
+            "nombre":"Pendientes Polaris","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-polaris.jpg"
+        },
+        "pendientes-sol-plata":{
+            "nombre":"Pendientes Sol Plata","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-sol-plata.jpg"
+        },
+        "pendientes-zumudio-dorado":{
+            "nombre":"Pendientes Zumudio Dorado","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-zumudio-dorado.jpg"
+        }
     }
 }

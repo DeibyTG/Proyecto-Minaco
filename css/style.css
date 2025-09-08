@@ -708,6 +708,12 @@ para el menu de navegacion*/
         gap: 4rem;
     }
 
+    .escaparate_pendientes_3{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
 
 /*ahora vamos con el css de los productos seleecionados
 se va activar cuando un usuario haga click en uno de los productos
@@ -726,9 +732,13 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
     }
 
 .main-producto-seleccionado{
-    width: 100%;
+    width: 100vw;
     height: auto;
-    padding:2rem
+    margin-top: 1rem;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
  .contenedor-producto-seleccionado{
@@ -745,14 +755,17 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
     }
 
         .foto-producto-seleccionado{
-            width: 35rem;
-            height: 35rem;
+            width: 30rem;
+            height: 30rem;
         }
 
  .contenedor-informacion-producto-seleccionado{
         width: 35vw;
         display: flex;
         flex-direction: column;
+        border: 1px solid black;
+        align-items: center;
+        text-align: center;
     }
 
         .info-producto-seleccionado{
@@ -760,6 +773,11 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
             height: 70vh;
             font-size: 2rem;
             
+        }
+
+        .info-producto-seleccionado > h2{
+            padding: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .contenedor-boton-realizar-pedido{
@@ -798,3 +816,93 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
 
 
 
+/* ahora viene el css de la pestaña de carrito 
+    donde van a seleccionar los productos */
+
+.main-carrito{
+    margin-top: 1rem;
+    width: 100vw;
+    height: auto;
+}
+
+    .contenedor-carrito{
+        width: 100vw;
+        height: auto;
+        display: flex;
+    }
+
+        .info-producto-pedido{
+            width: 40vw;
+            height: auto;
+            display: flex;
+            margin: 2rem;
+            gap: 4rem;
+
+        }
+
+            .foto-producto-carrito{
+                width: 20rem;
+                height: 20rem;
+                border-radius: 15px;
+            }
+
+            .cantidad-producto-carrito{
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                width: auto;
+                font-size: 2.5rem;
+            }
+
+        .datos-cliente{
+            width: 35vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .contenedor-formulario-datos{
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                background-color:#d5d9d9;
+                border: 1px solid black;
+                border-radius: 15px;
+            }
+
+                .contenedor-formulario-datos > h2{
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
+                }
+
+                .formulario-datos{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                
+           
+
+        .desglose-producto-precio{
+            width: 25vw;
+            height: auto;
+
+        }
+
+            .informacion-cantidad-carrito > ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 3rem;
+                gap: 1rem;
+                text-decoration: none;
+            }
+
+            #boton-realizar-pedido-carrito{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }

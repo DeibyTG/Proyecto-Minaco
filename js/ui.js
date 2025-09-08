@@ -75,6 +75,8 @@ document.addEventListener("DOMContentLoaded",()=>{
             if(data.collares[idProducto]) producto=data.collares[idProducto];
             else if (data.anillos[idProducto]) producto=data.anillos[idProducto];
             else if(data.pulsera[idProducto]) producto=data.pulsera[idProducto];
+            else if(data.pendientes[idProducto]) producto=data.pendientes[idProducto];
+
 
             if(producto){
 
@@ -86,7 +88,6 @@ document.addEventListener("DOMContentLoaded",()=>{
                     info.innerHTML=`
                         <h2>${producto.nombre}</h2>
                         <p>Precio: ${producto.precio}${producto.moneda}</p>
-                        <p>${producto.descripcion}</p>
                     `;
             }else{
                 document.querySelector(".contenedor-producto-seleccionado").textContent="producto no encontrado"
@@ -94,4 +95,62 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
         });
+});
+
+
+// Aqui viene el nuevo js pendiente de testear 
+
+
+
+// voy a intentar guardar la id de la foto que selecciona el cliente
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const pageId=document.body.id
+
+    if(pageId==="carrito"){
+
+        const params=new URLSearchParams(window.location.search);
+        const idProducto=params.get('id');
+
+        fetch('../data/productos.json')
+            .then(res=>res.json())
+            .then(data=>{
+                let producto=null;
+
+                if(data.collares[idProducto]) producto=data.collares[idProducto];
+                else if (data.anillos[idProducto]) producto=data.anillos[idProducto];
+                else if(data.pulsera[idProducto]) producto=data.pulsera[idProducto];
+                else if(data.pendientes[idProducto]) producto=data.pendientes[idProducto];
+
+
+                if(producto){
+
+                    const img=document.querySelector('.foto-producto-carrito');
+                        img.src=producto.imagen;
+                        img.alt=producto.nombre;
+
+                    const info=document.querySelector(".cantidad-producto-carrito");
+                        info.innerHTML=`
+                            <h2>${producto.nombre}</h2>
+                            <p>Precio: ${producto.precio}${producto.moneda}</p>
+                        `;
+                }else{
+                    document.querySelector(".cantidad-producto-carrito").textContent="producto no encontrado"
+                }
+
+
+            });
+    }
+});
+
+
+const botonPedido = document.querySelector(".boton-realizar-pedido");
+botonPedido.addEventListener("click", () => {
+    const params = new URLSearchParams(window.location.search);
+    const idProducto = params.get("id"); // id del producto en esta plantilla
+
+    window.location.href = `generar_pedido-carrito.html?id=${idProducto}`;
+
+    alert(idProducto);
 });

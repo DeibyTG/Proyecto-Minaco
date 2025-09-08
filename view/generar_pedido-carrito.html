@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Producto</title>
+    <title>Vista Carrito</title>
     <script src="../js/ui.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
 </head>
-
-<body id="producto">
+<body id="carrito">
     <header>
         <section>
             <div class="slider_informacion">
@@ -23,11 +21,11 @@
                         <div class="mensaje_info_carousel" id="primer_mensaje">
                             <p class="texto_info">Te damos la bienvenida a nuestra tienda</p>
                         </div>
-
+    
                         <div class="mensaje_info_carousel">
                             <p class="texto_info">Productos 100% artesanos</p>
                         </div>
-
+    
                         <div class="mensaje_info_carousel" id="ultimo_mensaje">
                             <p class="texto_info">Envios a peninsula e islas</p>
                         </div>
@@ -51,30 +49,72 @@
         </div>
     </nav>
 
-    <main class="main-producto-seleccionado">
-        <div class="contenedor-producto-seleccionado">
-            <div class="informacio-producto-seleccionado">
-                <picture>
-                    <img class="foto-producto-seleccionado">
-                </picture>
-            </div>
-
-            <div class="contenedor-informacion-producto-seleccionado">
-                <div class="info-producto-seleccionado">
+    <main class="main-carrito">
+        <div class="contenedor-carrito">
+            <div>
+                <h2>Producto Seleccionado</h2>
+                <div class="info-producto-pedido">
+                    <div class="contenedor-foto-producto-carrito">
+                        <picture>
+                            <img class="foto-producto-carrito" >
+                        </picture>
+                    </div>
+                    <div class="cantidad-producto-carrito">
+                        
+                    </div>
+                    
                 </div>
-                <div class="contenedor-boton-realizar-pedido">
-                    <a href="../view/generar_pedido-carrito.html">
-                        <button data-id="" class="boton-realizar-pedido" type="submit">HACER UN PEDIDO</button>
-                    </a>
+            </div>
+            <div class="datos-cliente">
+                <h2>Datos de Emvio</h2>
+                <form class="contenedor-formulario-datos">
+                    <h2>Informacion del Cliente</h2>
+                        <div class="formulario-datos">
+                            <input type="text" placeholder="Nombre">
+                            <input type="text" placeholder="Apellidos">
+                        </div>
+                    <h2>Contacto</h2>
+                        <div class="formulario-datos">
+                            <input type="tel" placeholder="Numero de telefono">
+                            <input type="email" placeholder="Correo Electronico">
+                        </div>
+                    <h2>Direccion de envio</h2>
+                        <div class="formulario-datos">
+                            <div>
+                                <input type="text" placeholder="Direccion">
+                                <input type="text" placeholder="Comunidad">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Municipio">
+                                <input type="text" placeholder="Codigo Postal">
+                            </div>
+                        </div>
+                </form>  
+            </div>
+            <div class="desglose-producto-precio">
+                <h2>Resumen Pedido</h2>
+                <div class="informacion-cantidad-carrito">
+                    <ul>
+                        <li>
+                            <p>Cantidad de articulos</p>
+                            <p id="cantidadArticulos"></p>
+                        </li>
+                        <li>
+                            <p>Total del pedido</p>
+                            <p id="totalPedido"></p>
+                        </li>
+                    </ul>
+                    <div class="contenedor-boton-realizar-pedido" id="boton-realizar-pedido-carrito">
+                        <button class="boton-realizar-pedido" type="submit">REALIZAR PEDIDO</button>
+                    </div>
                 </div>
             </div>
-
+            
         </div>
     </main>
-
-
+    
     <footer>
-
+    
         <div class="enlaces">
             <div class="redes">
                 <p>Nuestras Redes</p>
@@ -90,17 +130,17 @@
                 <label>minacobrand@gmail.com</label>
             </div>
         </div>
-
+    
         <div class="derechos">
             <picture>
                 <img alt="logo footer" class="logo-footer" src="../img/logo-empresa.jpg">
             </picture>
-
+    
             <p>&copy; 2025 Minaco. Todos los derechos reservados.</p>
             <p>Diseñado con ❤️ por Minaco</p>
         </div>
-
+    
     </footer>
+    
 </body>
-
 </html>
