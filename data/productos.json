@@ -1,82 +1,179 @@
 {
-    "collares":{
-        "collar-caracola-dorado":{
-            "nombre":"Collar Caracola dorado","precio":7,"moneda":"€", "imagen":"../img/collares/collar-caracola-gold.jpg" 
-        },
-        "collar-dulce":{
-            "nombre":"Collar Dulce","precio":7,"moneda":"€", "imagen":"../img/collares/collar-dulce.jpg"
-        },
-        "collar-estrellado":{
-            "nombre":"Collar Estrellado","precio":7,"moneda":"€", "imagen":"../img/collares/collar-estrellado.jpg"
-        },
-        "collar-fenix":{
-            "nombre":"Collare Fenix","precio":7,"moneda":"€", "imagen":"../img/collares/collar-fenix.jpg"
-        },
-        "collar-maritimo":{
-            "nombre":"Collar Maritimo","precio":7,"moneda":"€", "imagen":"../img/collares/collar-maritimo-acero.jpg"
-        },
-        "collar-chuche":{
-            "nombre":"Collar Chuche","precio":7,"moneda":"€", "imagen":"../img/collares/collar-chuche.jpg"
-        },
-        "collar-verano":{
-            "nombre":"Collar Verano","precio":7,"moneda":"€", "imagen":"../img/collares/collar-verano.jpg"
-        },
-        "collar-paraiso":{
-            "nombre":"Collar Paraiso","precio":7,"moneda":"€", "imagen":"../img/collares/collar-paraiso.jpg"
-        }
+    "collares": {
+      "collar-caracola-dorado": {
+        "nombre": "Collar Caracola dorado",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-caracola-gold.jpg",
+        "descripcion": "Añade un toque de verano y elegancia a tu look con este delicado collar dorado con forma de caracola."
+      },
+      "collar-dulce": {
+        "nombre": "Collar Dulce",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-dulce.jpg",
+        "descripcion": "Un collar divertido y encantador que endulzará cualquier outfit con su diseño único."
+      },
+      "collar-estrellado": {
+        "nombre": "Collar Estrellado",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-estrellado.jpg",
+        "descripcion": "Brilla en cada ocasión con este collar de estrellas que hará que tu estilo destaque."
+      },
+      "collar-fenix": {
+        "nombre": "Collare Fenix",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-fenix.jpg",
+        "descripcion": "Renace con estilo: este collar con inspiración en el fénix es pura fuerza y elegancia."
+      },
+      "collar-maritimo": {
+        "nombre": "Collar Maritimo",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-maritimo-acero.jpg",
+        "descripcion": "Siente la frescura del mar con este collar inspirado en la vida marina y el verano."
+      },
+      "collar-chuche": {
+        "nombre": "Collar Chuche",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-chuche.jpg",
+        "descripcion": "Dulce, divertido y lleno de color, perfecto para añadir un toque juguetón a tu look."
+      },
+      "collar-verano": {
+        "nombre": "Collar Verano",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-verano.jpg",
+        "descripcion": "El accesorio ideal para la temporada: fresco, ligero y lleno de estilo."
+      },
+      "collar-paraiso": {
+        "nombre": "Collar Paraiso",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/collares/collar-paraiso.jpg",
+        "descripcion": "Transporta tu estilo a un paraíso tropical con este encantador collar."
+      }
     },
-    "anillos":{
-        "anillo-sol-golden":{
-            "nombre":"Sol Golden","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-sol-golden.jpg" 
-        },
-        "anillo-sol-plata":{
-            "nombre":"Sol Plata","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-sol-plata.jpg" 
-        },
-        "anillo-mariposa-acero":{
-            "nombre":"Mariposa","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-mariposa-acero.jpg" 
-        },
-        "anillo-paris-plata":{
-            "nombre":"Paris Plata","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-paris-plata.jpg","descripcion":"Anillo unico para gobernarlos a todos"
-        },
-        "anillo-zirconita":{
-            "nombre":"Zirconita","precio":7,"moneda":"€", "imagen":"../img/anillos/anillo-zirconita.jpg" 
-        }
+    "anillos": {
+      "anillo-sol-golden": {
+        "nombre": "Sol Golden",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/anillos/anillo-sol-golden.jpg",
+        "descripcion": "Un anillo radiante que iluminará tu día y tu estilo con un brillo dorado irresistible."
+      },
+      "anillo-sol-plata": {
+        "nombre": "Sol Plata",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/anillos/anillo-sol-plata.jpg",
+        "descripcion": "Elegancia pura: un anillo en plata que aporta luz y sofisticación a cualquier conjunto."
+      },
+      "anillo-mariposa-acero": {
+        "nombre": "Mariposa",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/anillos/anillo-mariposa-acero.jpg",
+        "descripcion": "Delicado y encantador, este anillo con diseño de mariposa es un símbolo de transformación y belleza."
+      },
+      "anillo-paris-plata": {
+        "nombre": "Paris Plata",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/anillos/anillo-paris-plata.jpg",
+        "descripcion": "Chic y sofisticado: un anillo que combina elegancia urbana y encanto parisino."
+      },
+      "anillo-zirconita": {
+        "nombre": "Zirconita",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/anillos/anillo-zirconita.jpg",
+        "descripcion": "Brilla en cada ocasión con este anillo de zirconita, perfecto para destacar con sutileza."
+      }
     },
-    "pulsera":{
-        "pulsera-plateada":{
-            "nombre":"Estrella Plateada","precio":7,"moneda":"€", "imagen":"../img/pulseras/pulsera-estrella-plateada.jpg" 
-        },
-        "pulsera-mar-rosa":{
-            "nombre":"Mar Rosa","precio":7,"moneda":"€", "imagen":"../img/pulseras/pulsera-mar-rosa.jpg" 
-        }
+    "pulsera": {
+      "pulsera-plateada": {
+        "nombre": "Estrella Plateada",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pulseras/pulsera-estrella-plateada.jpg",
+        "descripcion": "Una pulsera que captura la magia de las estrellas y aporta un toque elegante a tu muñeca."
+      },
+      "pulsera-mar-rosa": {
+        "nombre": "Mar Rosa",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pulseras/pulsera-mar-rosa.jpg",
+        "descripcion": "Dulce y femenina, esta pulsera con tonos rosados es ideal para looks veraniegos y románticos."
+      }
     },
-    "pendientes":{
-        "pendientes-black":{
-            "nombre":"Pendientes Black","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-black.jpg"
-        },
-        "pendientes-cadena-dorado":{
-            "nombre":"Pendientes Cadena Dorada","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-cadena-dorado.jpg"
-        },
-        "pendientes-circonita":{
-            "nombre":"Pendientes Circonita","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-circonita.jpg"
-        },
-        "pendientes-sol-dorado":{
-            "nombre":"Pendientes Sol Dorado","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-sol-dorado.jpg"  
-        },
-        "pendientes-estrella-dorada":{
-            "nombre":"Pendientes Estrella Dorada","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-estrella-dorada.jpg"
-        },
-        "pendientes-olari-plata":{
-            "nombre":"Pendientes Olari Plata","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-olari-plata.jpg"
-        },
-        "pendientes-polaris":{
-            "nombre":"Pendientes Polaris","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-polaris.jpg"
-        },
-        "pendientes-sol-plata":{
-            "nombre":"Pendientes Sol Plata","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-sol-plata.jpg"
-        },
-        "pendientes-zumudio-dorado":{
-            "nombre":"Pendientes Zumudio Dorado","precio":7,"moneda":"€", "imagen":"../img/pendientes/pendientes-zumudio-dorado.jpg"
-        }
+    "pendientes": {
+      "pendientes-black": {
+        "nombre": "Pendientes Black",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-black.jpg",
+        "descripcion": "Modernos y atrevidos, estos pendientes negros son el complemento perfecto para un look impactante."
+      },
+      "pendientes-cadena-dorado": {
+        "nombre": "Pendientes Cadena Dorada",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-cadena-dorado.jpg",
+        "descripcion": "Largos y elegantes, estos pendientes dorados aportan sofisticación y movimiento a tu estilo."
+      },
+      "pendientes-circonita": {
+        "nombre": "Pendientes Circonita",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-circonita.jpg",
+        "descripcion": "Brillantes y delicados, estos pendientes con circonita añadirán un toque de glamour discreto."
+      },
+      "pendientes-sol-dorado": {
+        "nombre": "Pendientes Sol Dorado",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-sol-dorado.jpg",
+        "descripcion": "Irradia energía positiva con estos pendientes dorados inspirados en el sol."
+      },
+      "pendientes-estrella-dorada": {
+        "nombre": "Pendientes Estrella Dorada",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-estrella-dorada.jpg",
+        "descripcion": "Pequeños detalles que hacen la diferencia: pendientes dorados en forma de estrella para brillar."
+      },
+      "pendientes-olari-plata": {
+        "nombre": "Pendientes Olari Plata",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-olari-plata.jpg",
+        "descripcion": "Modernos y minimalistas, estos pendientes en plata combinan con cualquier outfit."
+      },
+      "pendientes-polaris": {
+        "nombre": "Pendientes Polaris",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-polaris.jpg",
+        "descripcion": "Inspirados en la constelación, estos pendientes aportan un toque celestial y elegante."
+      },
+      "pendientes-sol-plata": {
+        "nombre": "Pendientes Sol Plata",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-sol-plata.jpg",
+        "descripcion": "Sofisticación y luz en un diseño inspirado en el sol, perfecto para cualquier ocasión."
+      },
+      "pendientes-zumudio-dorado": {
+        "nombre": "Pendientes Zumudio Dorado",
+        "precio": 7,
+        "moneda": "€",
+        "imagen": "../img/pendientes/pendientes-zumudio-dorado.jpg",
+        "descripcion": "Atrevidos y llenos de estilo, estos pendientes dorados son un must para destacar."
+      }
     }
-}
+  }
+  

@@ -84,14 +84,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 
                 if(producto){
 
-                    const img=document.querySelector('.foto-producto-seleccionado');
+                const img=document.querySelector('.foto-producto-seleccionado');
                         img.src=producto.imagen;
                         img.alt=producto.nombre;
 
                     const info=document.querySelector(".info-producto-seleccionado");
                         info.innerHTML=`
                             <h2>${producto.nombre}</h2>
-                            <p>Precio: ${producto.precio}${producto.moneda}</p>
+                            <p>${producto.descripcion}</p>
                         `;
                 }else{
                     document.querySelector(".contenedor-producto-seleccionado").textContent="producto no encontrado"
@@ -108,9 +108,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     if (botonPedido) {
         botonPedido.addEventListener("click", () => {
         const params = new URLSearchParams(window.location.search);
-        const idProducto = params.get("id"); 
+        const idProducto = params.get("id"); // "collar-estrellado"
         console.log("ID capturada antes de ir al carrito:", idProducto);
 
+        // Redirigir al carrito pasando la misma ID
         window.location.href = `../view/generar_pedido_carrito.html?id=${idProducto}`;
 
     });

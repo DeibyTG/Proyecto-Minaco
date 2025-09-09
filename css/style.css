@@ -735,44 +735,47 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
     width: 100vw;
     height: auto;
     margin-top: 1rem;
-    border-top: 1px solid black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
 }
 
  .contenedor-producto-seleccionado{
-        margin: 2rem;
-        width: 90vw;
-        height: 30rem;
+        margin: 4rem;
         display: flex;
-        padding: 2rem;
+        border: 3px solid rgb(228, 188, 188);
+        justify-content: center;
+        gap: 4rem;
+        padding: 1rem;
     }
 
  .informacio-producto-seleccionado{
-        width: 65vw;
+        width: auto;
         height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
         .foto-producto-seleccionado{
-            width: 30rem;
-            height: 30rem;
+            width: 17rem;
+            height: 17rem;
+            border-radius: 12rem;
         }
 
  .contenedor-informacion-producto-seleccionado{
         width: 35vw;
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
         align-items: center;
         text-align: center;
     }
 
         .info-producto-seleccionado{
             width: auto;
-            height: 70vh;
-            font-size: 2rem;
-            
+            height: auto;
+            font-size: 2rem;            
         }
 
         .info-producto-seleccionado > h2{
@@ -782,13 +785,14 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
 
         .contenedor-boton-realizar-pedido{
             width: auto;
-            height: 30vh;
+            height: auto;
+            margin-bottom: 1rem;
         }
 
             .boton-realizar-pedido{
                 background-color: #eee;
                 border: none;
-                padding: 1rem;
+                padding: 0.6rem;
                 font-size: 1rem;
                 width: 10em;
                 border-radius: 1rem;
@@ -822,21 +826,31 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
 .main-carrito{
     margin-top: 1rem;
     width: 100vw;
-    height: auto;
+    height: auto;    
 }
+
+    .titulos{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
     .contenedor-carrito{
         width: 100vw;
-        height: auto;
         display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
     }
 
         .info-producto-pedido{
             width: 40vw;
             height: auto;
             display: flex;
+            flex-direction: column;
             margin: 2rem;
-            gap: 4rem;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
 
         }
 
@@ -852,22 +866,27 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
                 flex-direction: column;
                 width: auto;
                 font-size: 2.5rem;
+
             }
 
         .datos-cliente{
-            width: 35vw;
+            width: 60vw;
             height: auto;
             display: flex;
             flex-direction: column;
+            align-items: center;
+
         }
 
             .contenedor-formulario-datos{
                 display: flex;
                 flex-direction: column;
                 height: auto;
-                background-color:#d5d9d9;
+                width: 35rem;
+                background-color:white;
                 border: 1px solid black;
                 border-radius: 15px;
+                
             }
 
                 .contenedor-formulario-datos > h2{
@@ -882,27 +901,165 @@ como el header y el footer es el mismo en todos no hace falta volverlo a poner
                     justify-content: center;
                 }
 
-                
-           
 
-        .desglose-producto-precio{
-            width: 25vw;
-            height: auto;
+                .informacion-cantidad-carrito > ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 3rem;
+                    gap: 1rem;
+                    text-decoration: none;
+                }
 
-        }
+                #boton-realizar-pedido-carrito{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
 
-            .informacion-cantidad-carrito > ul{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-top: 3rem;
-                gap: 1rem;
-                text-decoration: none;
-            }
 
-            #boton-realizar-pedido-carrito{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+         /* Estilos generales */
+
+
+.main-carrito {
+    margin-top: 1rem;
+    width: 100vw;
+    height: auto;
+    background-color: #e9eff4; /* Color pastel azul muy suave para dar algo de frescura */
+}
+
+.titulos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedor-carrito {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.info-producto-pedido {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-producto-carrito {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 15px;
+}
+
+.cantidad-producto-carrito {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: auto;
+    font-size: 2.5rem;
+}
+
+/* Estilo para el formulario */
+.datos-cliente {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08); /* Sombra más suave para destacar el formulario */
+}
+
+.contenedor-formulario-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #2a2a2a; /* Color más oscuro para los títulos */
+    margin-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+.formulario-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.formulario-datos input {
+    width: 48%;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 0.95em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f7f7f7; /* Color de fondo suave para los inputs */
+    transition: all 0.3s ease;
+}
+
+.formulario-datos input:focus {
+    outline: none;
+    border-color: #ff6a00; /* Naranja vibrante para el foco */
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(255, 106, 0, 0.3);
+}
+
+.boton-realizar-pedido {
+    background-color: #ff6a00; /* Naranja suave */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.boton-realizar-pedido:hover {
+    background-color: #e65c00; /* Naranja más oscuro para el hover */
+}
+
+.informacion-cantidad-carrito {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.informacion-cantidad-carrito > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.informacion-cantidad-carrito > li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.informacion-cantidad-carrito > li > p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* .datos-cliente:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+} */
