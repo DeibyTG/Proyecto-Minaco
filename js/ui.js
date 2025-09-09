@@ -113,8 +113,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         window.location.href = `../view/generar_pedido_carrito.html?id=${idProducto}`;
 
-        console.log(idProducto);
-
     });
 
 
