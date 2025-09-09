@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         console.log("ID capturada antes de ir al carrito:", idProducto);
 
         // Redirigir al carrito pasando la misma ID
-        window.location.href = `generar_pedido-carrito.html?id=${idProducto}`;
+        window.location.href = `../view/generar_pedido-carrito.html?id=${idProducto}`;
 
     });
 
