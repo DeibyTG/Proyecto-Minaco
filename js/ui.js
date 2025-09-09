@@ -108,11 +108,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     if (botonPedido) {
         botonPedido.addEventListener("click", () => {
         const params = new URLSearchParams(window.location.search);
-        const idProducto = params.get("id"); // "collar-estrellado"
+        const idProducto = params.get("id"); 
         console.log("ID capturada antes de ir al carrito:", idProducto);
 
-        // Redirigir al carrito pasando la misma ID
-        window.location.href = `../view/generar_pedido-carrito.html?id=${idProducto}`;
+        window.location.href = `../view/generar_pedido_carrito.html?id=${idProducto}`;
+
+        console.log(idProducto);
 
     });
 
