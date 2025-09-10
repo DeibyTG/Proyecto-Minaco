@@ -13,19 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Capturamos la ID del producto desde la URL
-    const params = new URLSearchParams(window.location.search);
-    const idProducto = params.get("id"); // Ejemplo: "anillo-sol-golden"
-    console.log("Producto ID capturada:", idProducto);
-
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
+        e.preventDefault(); // evita recarga de página
         console.log("🚀 Submit capturado");
 
         // Generar un ID único para el pedido
         const idUnico = "PED-" + Date.now();
 
-        // Recopilamos todos los datos del formulario + ID del producto
+        // Capturar producto y cantidad desde el HTML del carrito
+        const productoNombre = document.querySelector('.cantidad-producto-carrito h2')?.textContent || '';
+        const cantidad = document.querySelector('.cantidad-producto-carrito p:last-child')?.textContent.replace('Cantidad: ', '') || '1';
+
+        // Crear objeto con todos los datos a enviar
         const formData = {
             nombre: form.nombre.value,
             apellidos: form.apellidos.value,
@@ -36,14 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
             municipio: form.municipio.value,
             codigo_postal: form.codigo_postal.value,
             id: idUnico,
-            productoId: idProducto,          // ID del producto
-            productoNombre: productoNombre,  // Nombre del producto
-            cantidad: 1                       // Puedes agregar la cantidad si quieres
+            producto: productoNombre,
+            cantidad: cantidad
         };
 
         console.log("Datos a enviar:", formData);
 
-        // Enviar datos usando EmailJS
+        // Enviar correo con EmailJS
         emailjs.send("service_qsq7jak", "template_z5necjk", formData)
             .then(() => {
                 alert("✅ Pedido enviado con éxito. ID: " + idUnico);
