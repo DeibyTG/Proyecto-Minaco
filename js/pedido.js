@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
             totalPedido:form.totalPedido.value,
             id: idUnico,
 
-            
         };
 
         console.log("Datos a enviar:", formData);
