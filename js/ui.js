@@ -47,16 +47,25 @@ setInterval(deslizar_mensajes,3000);
 
 
 //accion para que el main de la pagina index aparezca cuando hagamos scroll hacia abajo
+let f_ver_bestSeller; 
 
-function f_ver_bestSeller(){
-    const mainIndex=document.querySelector('.main-index');
+document.addEventListener("DOMContentLoaded", () => {
 
-    if(window.scrollY>100){
-        mainIndex.classList.add('animacion-ver-bs');
-    }else{
-        return;
+    const pageId = document.body.id;
+
+    if(pageId === "index") {
+
+        f_ver_bestSeller = function() {
+            const mainIndex = document.querySelector('.main-index');
+            if(mainIndex && window.scrollY > 100) {
+                mainIndex.classList.add('animacion-ver-bs');
+            }
+        }
+
+        window.addEventListener('scroll', f_ver_bestSeller);
     }
-}
+
+});
 
 window.addEventListener('scroll', f_ver_bestSeller);
   
@@ -104,7 +113,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 });
 
-        const botonPedido = document.querySelector(".boton-realizar-pedido");
+        const botonPedido = document.getElementById("boton-hacer-pedido");
     if (botonPedido) {
         botonPedido.addEventListener("click", () => {
         const params = new URLSearchParams(window.location.search);
