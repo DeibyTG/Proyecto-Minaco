@@ -1,24 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("✅ pedido.js cargado");
 
+    emailjs.init({
+        publicKey: "o0hmv95frzB3csrnf", // tu clave pública
+    });
 
-// vamos a conectar el servicio de correo electronico 
+    const form = document.getElementById("pedidoForm");
 
+    if (!form) {
+        console.error("❌ No se encontró el formulario #pedidoForm");
+        return;
+    }
 
-
-console.log("✅ pedido.js cargado");
-
-// Inicializar EmailJS
-emailjs.init("o0hmv95frzB3csrnf", { debug: true });
-
-const form = document.getElementById("pedidoForm");
-
-if (!form) {
-    console.error("❌ No se encontró el formulario #pedidoForm");
-} else {
-    form.addEventListener("submit", function(e) {
-        e.preventDefault(); // ✅ evita recarga
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
         console.log("🚀 Submit capturado");
 
         const idUnico = "PED-" + Date.now();
+
         const formData = {
             nombre: form.nombre.value,
             apellidos: form.apellidos.value,
@@ -43,4 +42,5 @@ if (!form) {
                 alert("❌ Error al enviar: " + JSON.stringify(err));
             });
     });
-}
+});
+
