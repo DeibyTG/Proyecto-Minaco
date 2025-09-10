@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("✅ pedido.js cargado");
 
-    // Inicializar EmailJS
+    
     emailjs.init({
         publicKey: "o0hmv95frzB3csrnf", // tu clave pública
     });
@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault(); // evita recarga de página
+        e.preventDefault(); 
         console.log("🚀 Submit capturado");
 
-        // Generar un ID único para el pedido
+        
         const idUnico = "PED-" + Date.now();
 
-        // Capturar producto y cantidad desde el HTML del carrito
+        
         const productoNombre = document.querySelector('.cantidad-producto-carrito h2')?.textContent || '';
         const cantidad = document.querySelector('.cantidad-producto-carrito p:last-child')?.textContent.replace('Cantidad: ', '') || '1';
 
-        // Crear objeto con todos los datos a enviar
+        
         const formData = {
             nombre: form.nombre.value,
             apellidos: form.apellidos.value,
@@ -34,9 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
             comunidad: form.comunidad.value,
             municipio: form.municipio.value,
             codigo_postal: form.codigo_postal.value,
+            nombreProducto:form.nombreProducto.value,
+            cantidadProducto:form.cantidadProducto.value,
+            totalPedido:form.totalPedido.value,
             id: idUnico,
-            producto: productoNombre,
-            cantidad: cantidad
+
+            
         };
 
         console.log("Datos a enviar:", formData);
@@ -52,4 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("❌ Error al enviar: " + JSON.stringify(err));
             });
     });
+
+
+
 });
+
+
+
+

@@ -73,6 +73,10 @@ window.addEventListener('scroll', f_ver_bestSeller);
 
 document.addEventListener("DOMContentLoaded",()=>{
 
+
+
+
+
     const pageId=document.body.id
     if(pageId==="producto"){
 
@@ -146,9 +150,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     if(pageId==="carrito"){
 
-
-        
-        
+       
 
         const params=new URLSearchParams(window.location.search);
         const idProducto=params.get('id');
@@ -172,17 +174,61 @@ document.addEventListener("DOMContentLoaded",()=>{
 
                     const info=document.querySelector(".cantidad-producto-carrito");
                         info.innerHTML=`
-                            <h2>${producto.nombre}</h2>
-                            <p>Precio: ${producto.precio}${producto.moneda}</p>
+                            <h2 class="nombre-articulo">${producto.nombre}</h2>
+                            <p class="precio-articulo">Precio: ${producto.precio}${producto.moneda}</p>
+                        
                         `;
                 }else{
                     document.querySelector(".cantidad-producto-carrito").textContent="producto no encontrado"
                 }
 
 
-            });
-    }
+                const nombreArticulo = document.querySelector(".nombre-articulo");
+                const articuloNombre = document.getElementById("articuloNombre");
+                const cantidadArticulo=document.getElementById("cantidadArticulo");
+                const articuloCantidad=document.getElementById("articuloCantidad");
         
+                if(nombreArticulo) {
+                    articuloNombre.innerText = nombreArticulo.innerHTML;
+                }else{
+                    alert("Nombre no encontrado");
+                }
+
+                if (cantidadArticulo && articuloCantidad) {
+                    articuloCantidad.innerText = cantidadArticulo.value;
+                    cantidadArticulo.addEventListener("input", () => {
+                    articuloCantidad.innerText = cantidadArticulo.value;
+                    document.getElementById('multiplicador_pedido').innerText=cantidadArticulo.value*valorElemento+"€";
+
+                    });
+                }
+
+                
+
+                const precioElemento=document.querySelector(".precio-articulo");
+                const textoElemento = precioElemento.textContent; // "Precio: 7$"
+                const match = textoElemento.match(/[\d,.]+/); // busca números y decimales
+                const valorElemento = parseFloat(match[0].replace(',', '.'));
+                let i=valorElemento;
+                
+                if(precioElemento){
+                    
+                        if (match) {
+                            console.log("Precio:", valorElemento);
+                            document.getElementById("multiplicador_pedido").innerText=valorElemento+"€";
+
+                            
+                        } else {
+                            console.warn("No se encontró un número en el precio");
+                        }
+                    } else {
+                        console.warn("Elemento .precio-articulo no encontrado");
+                    }
+
+
+
+            });
+
+    }
 });
-
-
+        

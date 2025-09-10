@@ -65,6 +65,12 @@
                 <div class="cantidad-producto-carrito">
 
                 </div>
+                <div class="cantidad-deseada">
+                    <form>
+                        <label>Cantidad</label>
+                        <input type="number" min="1" value="1" id="cantidadArticulo">
+                    </form>
+                </div>
             </div>
 
             <div class="datos-cliente">
@@ -88,6 +94,23 @@
                         <div class="formulario-datos">
                             <input type="text" name="municipio" placeholder="Municipio" required>
                             <input type="text" name="codigo_postal" placeholder="Codigo Postal" required>
+                        </div>
+
+                        <div class="formulario-datos">
+
+                            <div class="contenido-formulario-datos">
+                                <ul class="resumen-pedido">
+                                    <li><label class="datos-pedido-nombre" id="articuloNombre"
+                                            name="nombreProducto"></label></li>
+                                    <li><label class="datos-pedido-cantidad" id="articuloCantidad"
+                                            name="cantidadProducto"></label></li>
+                                </ul>
+                                <ul class="resumen-pedido">
+                                    <li>TOTAL PEDIDO</li>
+                                    <li id="multiplicador_pedido" name="totalPedido"></li>
+
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="contenedor-boton-realizar-pedido" id="boton-realizar-pedido-carrito">
