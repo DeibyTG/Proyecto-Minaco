@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista Carrito</title>
     <script src="../js/ui.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,36 +67,38 @@
             </div>
 
             <div class="datos-cliente">
-                <form class="contenedor-formulario-datos">
+                <form id="pedidoForm" class="contenedor-formulario-datos" name="formulario-pedido">
                     <h2>Informacion para Envio</h2>
                     <div class="formulario-datos">
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="text" placeholder="Apellidos" required>
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="text" name="apellidos" placeholder="Apellidos" required>
                     </div>
                     <h2>Contacto</h2>
                     <div class="formulario-datos">
-                        <input type="tel" placeholder="Numero de telefono" required>
-                        <input type="email" placeholder="Correo Electronico" required>
+                        <input type="tel" name="telefono" placeholder="Numero de telefono" required>
+                        <input type="email" name="email" placeholder="Correo Electronico" required>
                     </div>
                     <h2>Direccion de envio</h2>
                     <div>
                         <div class="formulario-datos">
-                            <input type="text" placeholder="Direccion" required>
-                            <input type="text" placeholder="Comunidad" required>
+                            <input type="text" name="direccion" placeholder="Direccion" required>
+                            <input type="text" name="comunidad" placeholder="Comunidad" required>
                         </div>
                         <div class="formulario-datos">
-                            <input type="text" placeholder="Municipio" required>
-                            <input type="text" placeholder="Codigo Postal" required>
+                            <input type="text" name="municipio" placeholder="Municipio" required>
+                            <input type="text" name="codigo_postal" placeholder="Codigo Postal" required>
                         </div>
 
                         <div class="contenedor-boton-realizar-pedido" id="boton-realizar-pedido-carrito">
-                            <button class="boton-realizar-pedido" type="submit">REALIZAR PEDIDO</button>
+                            <button class="boton-realizar-pedido" type="submit" id="boton-enviar-pedido">REALIZAR
+                                PEDIDO</button>
                         </div>
-
                     </div>
                 </form>
             </div>
         </div>
+
+
     </main>
 
     <footer>
@@ -126,7 +129,7 @@
         </div>
 
     </footer>
-
+    <script src="../js/pedido.js"></script>
 </body>
 
 </html>
