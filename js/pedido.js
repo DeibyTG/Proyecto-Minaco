@@ -43,23 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Datos a enviar:", formData);
 
         // Enviar correo con EmailJS
-        emailjs.send("service_qsq7jak", "template_z5necjk",{...formData,destinatario:"desarrollo.bylot@gmail.com"})
-            .then(() => {
-                console.log("✅ Pedido enviado con éxito. ID: " + idUnico);
-            })
-            .catch(err => {
-                console.error("❌ Error al enviar:", err);
-                alert("❌ Error al enviar: " + JSON.stringify(err));
-            });
-
-        emailjs.send("service_qsq7jak", "template_z5necjk",{...formData,destinatario:form.email.value})
-            .then(()=>{
-                alert("Hemos enviado un correo de confirmacion , revisa tu email para comprobar que esta todo correcto")
-                form.reset();
-            })
-            .catch(err=>{
-                alert("Error al intentar realizar el pedido , ponte en contaco con nosotros a traves del correo electronico, sentimos las molestias")
-            })
+        emailjs.send("service_qsq7jak", "template_z5necjk", formData)
+        .then(() => {
+            alert("✅ Pedido enviado con éxito. Hemos enviado una copia al correo indicado.");
+            form.reset();
+        })
+        .catch(err => {
+            console.error("❌ Error al enviar:", err);
+            alert("❌ Error al enviar: " + JSON.stringify(err));
+        });
     });
 
 
