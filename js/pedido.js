@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
             comunidad: form.comunidad.value,
             municipio: form.municipio.value,
             codigo_postal: form.codigo_postal.value,
-            nombreProducto:form.nombreProducto.value,
-            cantidadProducto:form.cantidadProducto.value,
-            totalPedido:form.totalPedido.value,
+            nombreProducto:form.nombreProducto.textContent,
+            cantidadProducto:form.cantidadProducto.textContent,
+            totalPedido:form.totalPedido.textContent,
             id: idUnico,
 
         };
