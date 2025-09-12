@@ -34,11 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
             comunidad: form.comunidad.value,
             municipio: form.municipio.value,
             codigo_postal: form.codigo_postal.value,
-            nombreProducto:form.nombreProducto.textContent,
-            cantidadProducto:form.cantidadProducto.textContent,
-            totalPedido:form.totalPedido.textContent,
+            nombreProducto: document.getElementById("articuloNombre").textContent,
+            cantidadProducto: document.getElementById("articuloCantidad").textContent,
+            totalPedido: document.getElementById("multiplicador_pedido").textContent,
             id: idUnico,
-
         };
 
         console.log("Datos a enviar:", formData);
@@ -57,6 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(()=>{
                 alert("Hemos enviado un correo de confirmacion , revisa tu email para comprobar que esta todo correcto")
                 form.reset();
+            })
+            .catch(err=>{
+                alert("Error al intentar realizar el pedido , ponte en contaco con nosotros a traves del correo electronico, sentimos las molestias")
             })
     });
 
