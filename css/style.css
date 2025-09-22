@@ -535,7 +535,7 @@ para el menu de navegacion*/
     justify-content: center;
     align-items: center;
     background-color: #e2d6e7;
-    border: 1px solid #d5d9d9;
+    border: 4px solid #d5d9d9;
     border-radius: 8px;
     box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
     box-sizing: border-box;
@@ -636,12 +636,31 @@ h2 {
 }
 
 .carousel_productos {
+    height: auto;
+    width: 18rem;
+    padding: 0.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     transition: 1s ease;
+    border-radius: 0.2rem;
+}
 
+div[name="escaparate-collares"] {
+    background: linear-gradient(rgb(207, 190, 219), rgb(154, 125, 175));
+}
+
+div[name="escaparate-anillos"] {
+    background: linear-gradient(rgb(215, 192, 158), rgb(196, 154, 82));
+}
+
+div[name="escaparate-pulsera"] {
+    background: linear-gradient(rgb(189, 227, 219), rgb(125, 175, 162));
+}
+
+div[name="escaparate-pendientes"] {
+    background: linear-gradient(rgb(230, 210, 200), rgb(180, 140, 120));
 }
 
 .carousel_productos:hover {
@@ -649,9 +668,43 @@ h2 {
     transition: 0.5s;
 }
 
+.carousel_productos>label {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.carousel_productos>label:first-of-type {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.carousel_productos>label:last-of-type {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+.carousel_productos>label:last-of-type:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+
 .foto_producto_categoria {
     height: 20rem;
     width: 16rem;
+    border-radius: 1rem;
 
 }
 
