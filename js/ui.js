@@ -83,16 +83,29 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         const params=new URLSearchParams(window.location.search);
         const idProducto=params.get('id');
+        const color_contenedor=document.querySelector('.contenedor-producto-seleccionado');
 
         fetch('../data/productos.json')
             .then(res=>res.json())
             .then(data=>{
                 let producto=null;
 
-                if(data.collares[idProducto]) producto=data.collares[idProducto];
-                else if (data.anillos[idProducto]) producto=data.anillos[idProducto];
-                else if(data.pulsera[idProducto]) producto=data.pulsera[idProducto];
-                else if(data.pendientes[idProducto]) producto=data.pendientes[idProducto];
+                if(data.collares[idProducto]){
+                    producto=data.collares[idProducto];
+                    color_contenedor.classList.add('color-collar');
+                }
+                else if(data.anillos[idProducto]){ 
+                    producto=data.anillos[idProducto];
+                    color_contenedor.classList.add('color-anillo');
+                } 
+                else if(data.pulsera[idProducto]){
+                    producto=data.pulsera[idProducto];
+                    color_contenedor.classList.add('color-pulsera');
+                } 
+                else if(data.pendientes[idProducto]){
+                    producto=data.pendientes[idProducto];
+                    color_contenedor.classList.add('color-pendientes');
+                } 
 
 
                 if(producto){
@@ -138,7 +151,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 
-// Aqui viene el nuevo js pendiente de testear 
 
 
 
@@ -231,4 +243,32 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     }
 });
-        
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".main_productos > .escaparate > div[id]");
+    const navLinks = document.querySelectorAll(".cajon-categoria-productos a");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+  
+            navLinks.forEach((link) => {
+              link.parentElement.classList.remove("active");
+              if (link.getAttribute("href") === `#${id}`) {
+                link.parentElement.classList.add("active");
+              }
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.5, // cuando el 50% de la sección es visible
+      }
+    );
+  
+    sections.forEach((section) => observer.observe(section));
+  });
+  
